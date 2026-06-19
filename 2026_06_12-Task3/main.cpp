@@ -2,13 +2,14 @@
 #include <string>
 using namespace std;
 
-
-struct Node {
+struct Node
+{
     string data;
-    Node* next; //pointer variable, stores address
+    Node *next; // pointer variable, stores address
 };
 
-int main() {
+int main()
+{
     // Node* head = new Node(); //head is pointer variable, stores a node address
     // Node* second = new Node();
     // Node* third = new Node();
@@ -32,9 +33,9 @@ int main() {
 
     // return 0;
 
-    Node* node1 = new Node();
-    Node* node2 = new Node();
-    Node* node3 = new Node();
+    Node *node1 = new Node();
+    Node *node2 = new Node();
+    Node *node3 = new Node();
 
     node1->data = "Aimar";
     node1->next = node2;
@@ -45,5 +46,11 @@ int main() {
     node3->data = "anjana";
     node3->next = NULL;
 
-    //TASK TODO : INSERT
+    Node *temp = node1;
+
+    while (temp != NULL)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
 }
